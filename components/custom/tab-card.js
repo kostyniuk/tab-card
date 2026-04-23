@@ -14,10 +14,11 @@ import {
 
 const tabTriggerClassName =
   "group-data-horizontal/tabs:after:bottom-0 data-active:border-foreground data-active:border-b-0"
+const cardClassName = "border border-foreground ring-0"
 
 export function TabCard() {
   return (
-    <Tabs defaultValue="overview" className="w-full">
+    <Tabs defaultValue="overview" className="w-full gap-0">
       <TabsList className="p-0">
         <TabsTrigger className={tabTriggerClassName} value="overview">
           Overview
@@ -33,7 +34,7 @@ export function TabCard() {
         </TabsTrigger>
       </TabsList>
       <TabsContent value="overview">
-        <Card>
+        <Card className={cardClassName}>
           <CardHeader>
             <CardTitle>Overview</CardTitle>
             <CardDescription>
@@ -47,7 +48,7 @@ export function TabCard() {
         </Card>
       </TabsContent>
       <TabsContent value="analytics">
-        <Card>
+        <Card className={cardClassName}>
           <CardHeader>
             <CardTitle>Analytics</CardTitle>
             <CardDescription>
@@ -61,7 +62,7 @@ export function TabCard() {
         </Card>
       </TabsContent>
       <TabsContent value="reports">
-        <Card>
+        <Card className={cardClassName}>
           <CardHeader>
             <CardTitle>Reports</CardTitle>
             <CardDescription>
@@ -75,7 +76,7 @@ export function TabCard() {
         </Card>
       </TabsContent>
       <TabsContent value="settings">
-        <Card>
+        <Card className={cardClassName}>
           <CardHeader>
             <CardTitle>Settings</CardTitle>
             <CardDescription>
