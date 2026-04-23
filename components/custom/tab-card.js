@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/tabs"
 
 const tabTriggerClassName =
-  "group-data-horizontal/tabs:after:bottom-0 data-active:border-foreground data-active:border-b-0"
+  "group-data-horizontal/tabs:after:bottom-0 data-active:z-10 data-active:h-full data-active:translate-y-px data-active:border-foreground data-active:border-b-0 data-active:bg-card"
 const cardClassName = "border border-foreground ring-0"
 
 export function TabCard() {
