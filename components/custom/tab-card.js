@@ -12,14 +12,25 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 
+const tabTriggerClassName =
+  "group-data-horizontal/tabs:after:bottom-0 data-active:border-foreground data-active:border-b-0"
+
 export function TabCard() {
   return (
-    <Tabs defaultValue="overview" className="w-[400px]">
-      <TabsList>
-        <TabsTrigger value="overview">Overview</TabsTrigger>
-        <TabsTrigger value="analytics">Analytics</TabsTrigger>
-        <TabsTrigger value="reports">Reports</TabsTrigger>
-        <TabsTrigger value="settings">Settings</TabsTrigger>
+    <Tabs defaultValue="overview" className="w-full">
+      <TabsList className="p-0">
+        <TabsTrigger className={tabTriggerClassName} value="overview">
+          Overview
+        </TabsTrigger>
+        <TabsTrigger className={tabTriggerClassName} value="analytics">
+          Analytics
+        </TabsTrigger>
+        <TabsTrigger className={tabTriggerClassName} value="reports">
+          Reports
+        </TabsTrigger>
+        <TabsTrigger className={tabTriggerClassName} value="settings">
+          Settings
+        </TabsTrigger>
       </TabsList>
       <TabsContent value="overview">
         <Card>
